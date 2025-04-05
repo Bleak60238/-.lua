@@ -28,7 +28,7 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "传送到箱子",
 	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.OfudaBox2.InteractPoint.CFrame
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Server.SpawnedItems.OfudaBox2.Lock.CFrame
 end
 })
 Tab:AddButton({
