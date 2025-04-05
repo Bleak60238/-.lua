@@ -29,6 +29,10 @@ Tab:AddButton({
 	Name = "传送到箱子",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Server.SpawnedItems.OfudaBox2.Lock.CFrame
+local args = {
+    [1] = "Equip",
+    [2] = "Key"
+}
 end
 })
 Tab:AddButton({
@@ -177,3 +181,4 @@ Tab:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/10h-pack/new-UI.345/refs/heads/main/FLY%20Chinese"))()
 end
 })    
+
