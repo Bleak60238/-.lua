@@ -33,6 +33,7 @@ local args = {
     [1] = "Equip",
     [2] = "Key"
 }
+game:GetService("ReplicatedStorage"):WaitForChild("ToolBarEvent"):FireServer(unpack(args))
 end
 })
 Tab:AddButton({
