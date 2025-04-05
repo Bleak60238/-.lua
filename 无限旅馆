@@ -110,6 +110,13 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.Sp
 end
 })    
 Tab:AddButton({
+	Name = "传送到盘子",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.Dish.WorldPivot
+end
+})    
+
+Tab:AddButton({
 	Name = "送到仪式房间",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[2].ExorcismGimmick.WorldPivot
