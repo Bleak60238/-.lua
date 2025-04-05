@@ -1,0 +1,159 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/10h-pack/UI/refs/heads/main/OrionLib'))()
+local Window = OrionLib:MakeWindow({Name = "无限旅馆", HidePremium = false, SaveConfig = true,IntroText = "无限旅馆", ConfigFolder = "1"})
+local Tab = Window:MakeTab({
+    Name = "传送",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+
+
+
+
+Tab:AddButton({
+	Name = "传送到箱子",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.OfudaBox2.InteractPoint.CFrame
+end
+})
+Tab:AddButton({
+	Name = "传送到钥匙",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.Key.WorldPivot
+end
+})        
+Tab:AddButton({
+	Name = "传送到保险柜［第二关使用］",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms.Room.Props.Safe.WorldPivot
+end
+})
+Tab:AddButton({
+	Name = "传送到保险柜第三关第四关使用",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[2].Props.Safe.Door.WorldPivot
+end
+})    
+Tab:AddButton({
+	Name = "传送到👻房第五关适用",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Server.MapGenerated.Rooms.Room.EventArea.CFrame
+end
+})
+Tab:AddButton({
+	Name = "通用传送 可以传送到一些特殊房间",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Server.MapGenerated.Rooms.Room.Walls.Part.CFrame
+end
+})   
+Tab:AddButton({
+	Name = "传送到第四关娃娃房",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms.Room.DollHouseGimic.stand.DollYellow.WorldPivot
+end
+}) 
+Tab:AddButton({
+	Name = "传送娃娃1",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.DollYellow.WorldPivot
+end
+}) 
+Tab:AddButton({
+	Name = "传送娃娃二",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.DollWhite.WorldPivot
+end
+})  
+Tab:AddButton({
+	Name = "传送娃娃三",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.DollRed.WorldPivot
+end
+})  
+Tab:AddButton({
+	Name = "传送娃娃四",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.DollBlue.WorldPivot
+end
+}) 
+Tab:AddButton({
+	Name = "传送到黑头",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.DollBlackHead.WorldPivot
+end
+}) 
+Tab:AddButton({
+	Name = "传送至第五关箱子",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Server.MapGenerated.Rooms.Room.DialGimmick.DialShelf.doorR.CFrame
+end
+}) 
+Tab:AddButton({
+	Name = "传送至电视一",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[12].Props.TelevisionN.Base.base01.WorldPivot
+end
+}) 
+Tab:AddButton({
+	Name = "传送至电视二",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[13].Props.TelevisionN.Base.base01.WorldPivot
+end
+})
+Tab:AddButton({
+	Name = "传送至电视三",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[19].Props.TelevisionW.Base.base01.WorldPivot
+end
+})
+Tab:AddButton({
+	Name = "传送至电视四",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[18].Props.TelevisionW.Base.base01.WorldPivot
+end
+})
+
+local Tab = Window:MakeTab({
+    Name = "玩家",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Plr = game.Players.LocalPlayer.Name
+Tab:AddTextbox({
+	Name = "速度",
+	Default = "16",
+	TextDisappear = false,
+	Callback = function(Value)
+	while true do
+  game.workspace[Plr].Humanoid.    WalkSpeed = Value
+  wait()
+  end
+    end	
+})
+Tab:AddButton({
+	Name = "穿墙",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TtmScripter/OtherScript/main/Noclip"))()
+end
+})    
+Tab:AddButton({
+	Name = "飞行",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/10h-pack/new-UI.345/refs/heads/main/FLY%20Chinese"))()
+end
+})    
