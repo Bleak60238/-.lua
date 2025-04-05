@@ -104,6 +104,19 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Wo
 end
 }) 
 Tab:AddButton({
+	Name = "传送到打火机",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.SpawnedItems.Lighter.WorldPivot
+end
+})    
+Tab:AddButton({
+	Name = "送到仪式房间",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[2].ExorcismGimmick.WorldPivot
+end
+})    
+
+Tab:AddButton({
 	Name = "传送至电视一",
 	Callback = function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Server.MapGenerated.Rooms:GetChildren()[12].Props.TelevisionN.Base.base01.WorldPivot
